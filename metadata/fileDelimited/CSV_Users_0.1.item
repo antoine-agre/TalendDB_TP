@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_briOYLBdEe6OD4b_zi6tcA" name="CSV_Users" id="_brgZMLBdEe6OD4b_zi6tcA" dataPackage="_briOYbBdEe6OD4b_zi6tcA" Server="Localhost 127.0.0.1" FilePath="C:/Users/antag/Documents/cours/5A/P2/archi_services/TP/csv_files/users.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_briOYbBdEe6OD4b_zi6tcA" name="default" dataManager="_briOYLBdEe6OD4b_zi6tcA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_briOYrBdEe6OD4b_zi6tcA" id="_uYtUoLBcEe6OD4b_zi6tcA" label="CSV_User">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bri1cLBdEe6OD4b_zi6tcA" label="nom" length="50" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bri1cbBdEe6OD4b_zi6tcA" label="prenom" length="50" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bri1crBdEe6OD4b_zi6tcA" label="login" length="30" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bri1c7BdEe6OD4b_zi6tcA" label="password" length="30" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

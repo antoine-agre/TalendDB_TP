@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GetUserByLoginWS"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="GetUserByLoginWSOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="login" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GetUserByLoginWSOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+                        <xsd:element name="user" type="tns:user"></xsd:element>
+                    </xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		
+			<xsd:complexType name="user">
+				<xsd:sequence>
+					<xsd:element name="nom" type="xsd:string"></xsd:element>
+					<xsd:element name="prenom" type="xsd:string"></xsd:element>
+					<xsd:element name="login" type="xsd:string"></xsd:element>
+					<xsd:element name="password" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="id" type="xsd:int"></xsd:attribute>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="GetUserByLoginWSOperationRequest">
+		<wsdl:part name="parameters" element="tns:GetUserByLoginWSOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="GetUserByLoginWSOperationResponse">
+		<wsdl:part name="parameters" element="tns:GetUserByLoginWSOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="GetUserByLoginWSPortType">
+		<wsdl:operation name="GetUserByLoginWSOperation">
+			<wsdl:input message="tns:GetUserByLoginWSOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:GetUserByLoginWSOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="GetUserByLoginWSBinding"
+		type="tns:GetUserByLoginWSPortType">
+
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GetUserByLoginWSOperation">
+
+			<soap:operation
+				soapAction="http://www.talend.org/service/GetUserByLoginWSOperation" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="GetUserByLoginWS">
+		<wsdl:port name="GetUserByLoginWSPort" binding="tns:GetUserByLoginWSBinding">
+			<soap:address location="http://localhost:8090/services/GetUserByLoginWS" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
