@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <tns:GetUserWSOperationResponse xmlns:tns="http://www.talend.org/service/">
+         <user id="1">
+            <nom>agré</nom>
+            <prenom>antoine</prenom>
+            <login>agre-a</login>
+            <password>fezgoihu</password>
+         </user>
+      </tns:GetUserWSOperationResponse>
+   </soap:Body>
+</soap:Envelope>

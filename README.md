@@ -1,6 +1,12 @@
 # TP Architecture de services
 > Antoine AGRÉ - 5A INSA ICy
 
+Le répertoire `tp` contient des fichiers pour aider à l'utilisation du projet.
+
+`tp/csv_files` contient des fichiers CSV qui peuvent être utilisés pour tester `CSV_Import`.
+
+`tp/REST-Project-4-soapui-project.xml` et `tp/SOAP-PRoject-soapui-project.xml` sont des projets SoapUI contenant des exemples de requêtes pour tester `REST_API_Create_User`, `SOAP_WS_Get_User` et `SOAP_WS_Get_User_By_Login`.
+
 ## Base de données
 
 Ce projet manipule une base de données PostgreSQL.
